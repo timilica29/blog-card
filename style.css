@@ -1,8 +1,8 @@
-@import url('/assets/fonts/Figtree-Italic-VariableFont_wght.ttf');
+@import url('./assets/fonts/Figtree-Italic-VariableFont_wght.ttf');
 
 @font-face {
     font-family: 'Figtree';
-    src: url('/assets/fonts/Figtree-VariableFont_wght.ttf') format('truetype');
+    src: url('./assets/fonts/Figtree-VariableFont_wght.ttf') format('truetype');
     font-weight: 100 900;
     font-stretch: 75% 150%;
 }
