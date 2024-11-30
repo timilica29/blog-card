@@ -1,3 +1,80 @@
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+
+
 @import url('./assets/fonts/Figtree-VariableFont_wght.ttf');
 
 @font-face {
@@ -13,23 +90,20 @@
 
 body{
     background-color: #F4D04E;
-    font-family: 'Figtree';
-}
-
-.container{
+    font-family: 'Figtree', sans-serif;
+    padding: 16px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100svh;
 }
 
 .blog-card{
     background-color: white;
-    width: 384px;
-
+    max-width: 24rem;
     display: flex;
     flex-direction: column;
-    padding: 24px 24px 24px 24px;
+    padding: 24px;
     gap: 24px;
     border-radius: 20px;
     border: 1px solid black;
@@ -55,21 +129,21 @@ svg{
 
 
 img{
-    width: 32px;
-    height:32px;
+    width: 2rem;
+    height: 2rem;
 }
 
 h2{
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 850;
 }
 
 .category{
     background-color: #F4D04E;
     padding:  4px 12px 4px 12px;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 900;
-    width: 62px;
+    width: fit-content;
     border-radius: 4px;
     color: #111111;
     display: flex;
@@ -77,15 +151,15 @@ h2{
     justify-content: center;
 }
 
-#subHeading{
-    font-size: 14px;
+.subHeading{
+    font-size: 0.875rem;
     font-weight: 550;
 }
 
-#description{
-    font-size: 16px;
+.description{
+    font-size: 1rem;
     font-weight: 500;
-    width: 365px;
+    width: 22.813rem;
     color: #6B6B6B;
 }
 
@@ -93,7 +167,7 @@ h2{
     display: flex;
     align-items: center;
     gap: 12px;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 900;
 }
 
